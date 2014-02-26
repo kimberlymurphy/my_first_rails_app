@@ -1,0 +1,6 @@
+<% if params[:when].downcase == 'now' %>
+  <%time = Time.new %>
+  <%time = time.getlocal.getutc %>
+  The current time is
+  <%= time.strftime("%a, %d %b %Y %H:%M:%S") + " " + time.zone %>
+<% end %>
